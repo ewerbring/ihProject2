@@ -1,0 +1,28 @@
+<h2 style="color: blue;">Project {{title}}</h2>
+
+
+
+<form action="/project" method="POST">
+    <label for="topic">TOPIC: </label>
+    <input type="text" name="topic" id="topic">
+   <br><br>
+  <label for="password">COMMENT</label>
+  <input id="password" type="password" name="password" placeholder="">
+   
+
+
+  
+  {{#if message }}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+
+  <br><br>
+
+  <button>Create account</button>
+
+  <p class="account-message">
+    Do you already have an account?
+    <a href="/auth/login">Login</a>
+  </p>
+</form>
+

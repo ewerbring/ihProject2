@@ -1,0 +1,95 @@
+<h1>{{data.name}}</h1>
+<p>Welcome to {{data.name}}</p>
+
+
+
+<p>Welcome to</P>
+{{#each data.infoLink}}
+<a href="http://{{data.infoLink}}">hello</a></p>
+{{/each}}
+
+<img class="rendering" src={{data.imageUrl}} alt="">
+
+<form action="/project/comment/{{data._id}}" method="post">
+  <label for="topic">TOPIC</label>
+  <input type="text" name="topic" id="topic">
+  <br><br>
+  <label for="comment">COMMENT</label>
+  <input type="text" name="comment" id="comment">
+  <br><br>
+  <button type="submit">Submit new comment</button>
+</form>
+
+
+
+
+
+<div class="imagebox">
+
+  {{!-- {{#each data.people}} --}}
+
+  {{!-- {{#if (eq ../userId _user._id)}}
+  <img class="drag2" style="left:{{xposition}}px; top:{{yposition}}px" id={{_id}} src="../../{{imgPath}}" width='60px'
+    alt=""> --}}
+  {{!-- {{else if (eq val2 val3)}}
+  <p>ELSE IF Branch</p> --}}
+  {{!-- {{else}}
+  <img class="drag" style="left:{{xposition}}px; top:{{yposition}}px" id={{_id}} src="../../{{imgPath}}" width='60px'
+    alt="">
+  {{/if}} --}}
+
+  {{!-- {{#ifCond ../userId  _user._id}}
+  <img class="drag2" style="left:{{xposition}}px; top:{{yposition}}px" id={{_id}} src="../../{{imgPath}}" width='60px'
+    alt="">
+  {{else}}
+  <img class="drag4" style="left:{{xposition}}px; top:{{yposition}}px" id={{_id}} src="../../{{imgPath}}" width='60px'
+    alt="">
+  {{/ifCond}} --}}
+
+  {{!-- {{#ifDiff ../userId _user._id}}
+  <img class="drag4" style="left:{{xposition}}px; top:{{yposition}}px" id={{_id}} src="../../{{imgPath}}" width='60px'
+    alt="">
+  {{/ifDiff}} --}}
+
+  {{!-- {{/each}} --}}
+
+  {{#each data.people}}
+
+  {{!-- 
+  {{../userId}}
+  {{_user._id}} --}}
+  <img class="drag2" style="left:{{xposition}}px; top:{{yposition}}px" id={{_id}} src="../../{{imgPath}}" width='60px'
+    alt="">
+  {{/each}}
+
+</div>
+
+
+{{#each data.comments}}
+<div class="drag box sb3" id="{{_id}}" style="left:{{xposition}}px; top:{{yposition}}px">
+
+
+  <p><b class="userC">{{_user.username}}:</b><br>{{topic}} </p>
+  <p>{{comment}}</p>
+
+  <form action="/project/subcomment/{{_id}}" method="post">
+    {{#each this.subcomment }}
+    <p class="subcomment"><b class="userC"></b>{{_user.username}} responded:<br>{{subcomment}}</p>
+    {{/each}}
+    <input type="text" name="subcomment" id="response">
+    <button type="submit">respond</button>
+</div>
+</form>
+
+{{/each}}
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+  </script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous">
+  </script>
+
+<link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.10/themes/ui-lightness/jquery-ui.css" rel="stylesheet"
+  type="text/css" />

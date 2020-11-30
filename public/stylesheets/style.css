@@ -1,0 +1,80 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: grid;
+  justify-items: center; }
+
+a {
+  color: #00b7ff; }
+
+.userC {
+  font-size: 8px;
+  color: white;
+  opacity: 0.5; }
+
+.subcomment {
+  color: white;
+  left: 20px;
+  position: relative; }
+
+.drag {
+  position: relative; }
+
+.drag4 {
+  width: 4vw; }
+
+.drag2 {
+  width: 4vw; }
+
+.drag3 {
+  width: 4vw;
+  position: relative; }
+
+.imagebox {
+  left: 150px;
+  position: absolute;
+  top: 350px;
+  width: 100vw;
+  height: 60vh;
+  justify-content: flex-start; }
+
+.rendering {
+  width: 1000px;
+  position: relative; }
+
+.box {
+  width: 100px;
+  margin: 50px auto;
+  background: #00bfb6;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  font-family: arial;
+  position: relative; }
+
+.sb3:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #00bfb6;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #00bfb6;
+  border-bottom: 10px solid transparent;
+  right: -20px;
+  top: 6px; }
+
+.sb3:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 7px solid #fff;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #fff;
+  border-bottom: 7px solid transparent;
+  right: -11px;
+  top: 10px; }
+
+/*# sourceMappingURL=style.css.map */
